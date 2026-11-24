@@ -1,0 +1,33 @@
+## =====================================
+## .NET / Visual Studio GitIgnore
+## =====================================
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio & IDE files
+.vs/
+.vscode/
+.idea/
+*.user
+*.userprefs
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Runtime directories & memory
+Memory/
+Workspace/
+
+# Sensitive local overrides
+appsettings.local.json
+*.local.json
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
