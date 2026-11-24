@@ -1,123 +1,246 @@
-﻿# AETHER Core Engine
+# AETHER Core Engine
 
-## Project Initiated: June 28, 2026
+### An Intelligent AI Desktop Companion — Inspired by J.A.R.V.I.S.
 
-## Overview
+**Project Initiated: June 28, 2026**
 
-AETHER Core Engine (Advanced Executive Tactical & Holographic Engine Resource) is an intelligent, voice-enabled AI desktop system. Built on .NET 8.0 WPF, AETHER combines global hotkey access, an Arc Reactor HUD visualizer, real-time token streaming, neural voice synthesis, live hardware telemetry, computer vision screen analysis, and autonomous background mission execution.
+---
+
+## About the Project
+
+**AETHER Core Engine** (Advanced Executive Tactical & Holographic Engine Resource) is an intelligent, voice-enabled AI desktop assistant designed to transform the way humans interact with their computers.
+
+Inspired by the fictional **J.A.R.V.I.S. (Just A Rather Very Intelligent System)** from Marvel's Iron Man universe, AETHER explores the idea of bringing a futuristic, context-aware, voice-controlled personal AI companion into the real world.
+
+The inspiration behind J.A.R.V.I.S. goes beyond its voice or holographic interface. It represents a vision of an intelligent system that can understand instructions, assist with complex tasks, interact with its environment, and work alongside its user.
+
+AETHER aims to bring elements of that vision into a practical Windows desktop environment.
+
+Built using **.NET 8.0 and WPF**, AETHER combines intelligent conversational interaction, real-time screen understanding, neural voice synthesis, desktop automation, hardware monitoring, and autonomous background task execution into a unified AI-powered workstation.
+
+The internal project architecture also retains the `JarvisCoreEngine` naming convention as a deliberate tribute to the inspiration behind AETHER.
+
+**AETHER is not a recreation of the fictional J.A.R.V.I.S. It is an independent engineering project that takes inspiration from that concept and explores what a practical desktop AI companion can become.**
+
+---
+
+## The Vision Behind AETHER
+
+The goal is simple:
+
+> Your computer shouldn't just execute commands. It should understand what you need, help you accomplish it, and work alongside you.
+
+AETHER is designed around five fundamental principles:
+
+- **Intelligence:** Understand natural-language instructions and provide contextual assistance.
+- **Awareness:** Analyze the active screen and understand what is happening on the workstation.
+- **Autonomy:** Execute background missions without interrupting the user's workflow.
+- **Interaction:** Provide natural voice and text-based communication.
+- **Integration:** Connect AI capabilities directly with Windows desktop operations.
 
 ---
 
 ## Key Features
 
-### AETHER Vision (Instant Screen Intelligence)
-* Hotkey: Alt + S (or click VISION on the HUD, or voice: "Analyze screen").
-* Captures the active display buffer, transmits it to Groq vision models, and streams real-time tactical breakdowns of code, errors, terminal messages, and UI layouts without manual copying.
+### 1. AETHER Vision — Instant Screen Intelligence
 
-### Autonomous Ghost Agent (Mission Operative)
-* Trigger: Click GHOST (or voice: "Ghost mission: [objective]").
-* Dispatches an asynchronous background worker to research, analyze, and compile publication-grade dossiers directly into your Workspace folder while you continue working uninterrupted.
+- Hotkey: `Alt + S`
+- Captures the active display buffer.
+- Transmits screen content to Groq vision models.
+- Analyzes source code, errors, terminal messages, and application interfaces.
+- Streams contextual AI-generated explanations in real time.
 
-### Studio-Quality Neural Voice and Audio Pipeline
-* Microsoft Neural Edge-TTS: Fluent British voice (en-GB-RyanNeural), American voice (en-US-ChristopherNeural), and Hindi voices (hi-IN-MadhurNeural).
-* Offline SAPI 5 Fallback: Zero-downtime voice synthesis when disconnected from network.
-* Smart Hinglish Transliteration: Automatically converts Romanized Hindi speech into Devanagari script for natural pronunciation.
-* Voice Feedback Suppression: Automatically pauses microphone listener while AETHER is actively speaking to prevent echo loops.
+AETHER Vision allows the assistant to understand what is currently happening on the user's screen without requiring manual screenshots or copied text.
 
-### Live System Telemetry HUD
-* Meters on HUD: Real-time CPU Load % and RAM Utilization % with memory tooltips via zero-overhead Win32 APIs (GetSystemTimes, GlobalMemoryStatusEx).
-* Status Bar: Connection indicators and responsive audio equalizer waves driven by microphone input and TTS output.
+### 2. Autonomous Ghost Agent — Mission Operative
 
-### PC Desktop Automation and System Control
-* App Launcher: "Open Chrome", "Open VS Code", "Open Notepad", "Open Calculator", "Open Task Manager", "Open Spotify", "Open YouTube", "Open GitHub".
-* Volume Controls: "Mute", "Unmute", "Volume up", "Volume down".
-* Workstation Security: "Lock PC", "Lock workstation" (instant Windows lock).
-* Diagnostic Report: "System status", "Health check" (spoken hardware brief).
-* Web Search: "Search for [topic]", "Google [topic]".
+- Trigger: Click GHOST or use the voice command `Ghost mission: [objective]`.
+- Executes asynchronous background tasks.
+- Researches, analyzes, and compiles detailed reports.
+- Generates publication-grade dossiers directly inside the Workspace folder.
+- Allows the user to continue working while missions execute independently.
 
-### Global Tactical Summon Hotkeys
-* Alt + Space (or Alt + J): Instantly summons AETHER to the foreground from any full-screen application. Pressing it again minimizes it back to the system tray.
-* Alt + S: Triggers immediate AETHER Vision screen capture and analysis.
+The Ghost Agent introduces an autonomous task-execution layer inspired by the idea of delegating complex work to an intelligent digital assistant.
 
----
+### 3. Studio-Quality Neural Voice and Audio Pipeline
 
-## Tactical Shortcuts Reference
+- Microsoft Neural Edge-TTS integration.
+- British voice: `en-GB-RyanNeural`
+- American voice: `en-US-ChristopherNeural`
+- Hindi voice: `hi-IN-MadhurNeural`
+- Offline SAPI 5 fallback.
+- Smart Hinglish-to-Devanagari transliteration.
+- Voice feedback suppression to prevent microphone echo loops.
 
-| Shortcut | Function | Description |
-| :--- | :--- | :--- |
-| Alt + Space | Summon / Dismiss | Toggles HUD overlay over active applications |
-| Alt + S | AETHER Vision | Snaps screen and streams AI visual analysis |
-| Alt + J | Summon Fallback | Secondary hotkey if Alt + Space is intercepted |
-| Enter | Transmit | Sends command or query in chat bar |
-| Click Ghost Button | Ghost Agent | Dispatches background research mission |
-| Click Vision Button | Vision Scan | Manually initiates screen reconnaissance |
+AETHER is designed to communicate naturally rather than behaving like a traditional command-line utility.
+
+### 4. Live System Telemetry HUD
+
+- Real-time CPU utilization.
+- RAM utilization monitoring.
+- Hardware telemetry using Win32 APIs.
+- CPU monitoring through `GetSystemTimes`.
+- Memory monitoring through `GlobalMemoryStatusEx`.
+- Connection status indicators.
+- Audio-reactive equalizer visualization.
+
+The HUD provides a real-time overview of workstation activity through a futuristic Arc Reactor-inspired interface.
+
+### 5. PC Desktop Automation and System Control
+
+**Application Launcher**
+- Open Chrome
+- Open VS Code
+- Open Notepad
+- Open Calculator
+- Open Task Manager
+- Open Spotify
+- Open YouTube
+- Open GitHub
+
+**System Controls**
+- Mute / Unmute
+- Volume Up / Volume Down
+- Lock PC / Lock Workstation
+
+**Diagnostics**
+- System Status
+- Health Check
+- Spoken hardware status reports
+
+**Web Intelligence**
+- Search for [topic]
+- Google [topic]
+
+### 6. Global Tactical Summon Hotkeys
+
+| Shortcut | Function |
+|---|---|
+| `Alt + Space` | Summon / Dismiss AETHER |
+| `Alt + J` | Secondary summon shortcut |
+| `Alt + S` | AETHER Vision screen analysis |
+| `Enter` | Transmit command or query |
+| GHOST Button | Launch autonomous mission |
+| VISION Button | Initiate screen analysis |
+
+AETHER can be summoned from other applications and minimized back to the system tray.
 
 ---
 
 ## Architecture and Solution Structure
 
-`
+The architecture follows a modular design, separating the core intelligence engine, desktop interface, and API layer.
+
+The `JarvisCoreEngine` naming convention is intentionally retained as a reference to J.A.R.V.I.S., the original conceptual inspiration behind the project.
+
+```text
 Aether/
-|-- Aether.sln                          # Master Visual Studio Solution
-|-- .gitignore                          # Visual Studio and .NET ignores
-|-- README.md                           # Documentation and setup guide
-|-- JarvisCoreEngine/                   # Core Class Library
-|   |-- Commands/                       # Core engine commands
-|   |-- Interfaces/                     # Contracts and abstractions
-|   |-- Jobs/                           # Scheduled background jobs
-|   |-- Models/                         # Settings and data models
-|   |-- Services/                       # AI, HTTP, File, and Memory services
-|   -- Utilities/                      # Logger and diagnostic helpers
-|-- JarvisCoreEngine.Desktop/           # Futuristic WPF Desktop Application
-|   |-- App.xaml / App.xaml.cs          # Application bootstrapper and DI container
-|   |-- appsettings.json                # Configuration and LLM endpoint settings
-|   |-- MainWindow.xaml / .cs           # Hologram HUD, Arc Reactor, and chat panel
-|   |-- Assets/                         # Application branding and icons
+|
+|-- Aether.sln
+|-- .gitignore
+|-- README.md
+|
+|-- JarvisCoreEngine/
+|   |-- Commands/
+|   |-- Interfaces/
+|   |-- Jobs/
+|   |-- Models/
 |   |-- Services/
-|   |   |-- EdgeTtsService.cs           # Microsoft Edge Neural TTS client
-|   |   |-- GhostAgentService.cs        # Autonomous background research agent
-|   |   |-- SystemControlService.cs     # Windows PC automation and telemetry
-|   |   |-- TransliterationService.cs   # Hinglish-to-Devanagari pipeline
-|   |   |-- TrayService.cs              # System tray residency and global hotkeys
-|   |   |-- VisionService.cs            # Screen capture and Vision engine
-|   |   -- VoiceService.cs             # Speech recognition (STT) and playback (TTS)
-|   |-- Themes/                         # Cyberpunk neon palette and gradient brushes
-|   -- Views/                          # Graphical settings manager
--- JarvisCoreEngine.Api/               # ASP.NET Core Web API Service
-    |-- Controllers/                    # REST endpoints
-    -- Dtos/                           # Data transfer objects
-`
+|   |-- Utilities/
+|
+|-- JarvisCoreEngine.Desktop/
+|   |-- App.xaml / App.xaml.cs
+|   |-- appsettings.json
+|   |-- MainWindow.xaml / MainWindow.xaml.cs
+|   |-- Assets/
+|   |-- Services/
+|   |   |-- EdgeTtsService.cs
+|   |   |-- GhostAgentService.cs
+|   |   |-- SystemControlService.cs
+|   |   |-- TransliterationService.cs
+|   |   |-- TrayService.cs
+|   |   |-- VisionService.cs
+|   |   |-- VoiceService.cs
+|   |-- Themes/
+|   |-- Views/
+|
+|-- JarvisCoreEngine.Api/
+    |-- Controllers/
+    |-- Dtos/
+```
+
+---
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Core Framework | .NET 8.0 |
+| Desktop Interface | WPF |
+| Programming Language | C# |
+| AI / LLM Integration | Groq API |
+| Vision Intelligence | Groq Vision Models |
+| Neural Voice | Microsoft Edge-TTS |
+| Offline Voice | Windows SAPI 5 |
+| System Telemetry | Windows Win32 APIs |
+| API Layer | ASP.NET Core |
+| Desktop Architecture | Modular Service-Based Architecture |
 
 ---
 
 ## Getting Started
 
 ### Prerequisites
-* Windows 10 / 11 (64-bit)
-* .NET 8.0 SDK or later
-* Visual Studio 2022 / Rider / VS Code with C# Dev Kit
+
+- Windows 10 / Windows 11 (64-bit)
+- .NET 8.0 SDK or later
+- Visual Studio 2022 / Rider / VS Code with C# Dev Kit
 
 ### Configuration
-AETHER accepts API credentials through environment variables or configuration files:
 
-1. Option A (Recommended - Environment Variable):
-   `powershell
-   setx GROQ_API_KEY "your_groq_api_key_here"
-   `
-2. Option B (In-App Settings):
-   Open the Settings Window (via System Tray or HUD) and enter your API key directly. Settings apply live without restarting.
+AETHER requires a Groq API key for AI-powered functionality.
+
+**Option A — Environment Variable (Recommended)**
+
+```powershell
+setx GROQ_API_KEY "your_groq_api_key_here"
+```
+
+**Option B — In-App Settings**
+
+Open the Settings Window through the System Tray or HUD and configure your API key. Settings can be applied without restarting the application.
 
 ### Build and Run
-`powershell
-# Restore and Build the full solution
+
+```powershell
+# Restore and build the solution
 dotnet build Aether.sln
 
-# Launch AETHER Desktop
+# Launch the desktop application
 dotnet run --project JarvisCoreEngine.Desktop
-`
+```
+
+---
+
+## Project Philosophy
+
+AETHER represents an exploration of the future of personal computing.
+
+Taking inspiration from the J.A.R.V.I.S. concept, the project focuses on bringing together voice interaction, contextual intelligence, computer vision, automation, and autonomous task execution into one cohesive desktop environment.
+
+Rather than building another chatbot inside a window, the objective is to create an AI companion that can interact with the actual operating system and assist with real workstation activities.
+
+**The inspiration is J.A.R.V.I.S. The implementation is AETHER.**
 
 ---
 
 ## Author
-* Pratha
-* Core Framework: .NET 8.0 WPF
+
+**Pratha**
+
+*Independent AI Desktop Assistant Engineering Project*
+
+**Core Framework:** .NET 8.0 WPF
+
+**Project Name:** AETHER Core Engine
+
